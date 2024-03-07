@@ -10,6 +10,11 @@ class Course extends Model
     protected $table = 'courses';
     protected $primarykey = 'id';
     protected $fillable = ['name', 'syllabus', 'duration'];
-    
     use HasFactory;
+
+    public function duration(){
+        return $this->duration. "Months";
+    }
+    
+   
 }
